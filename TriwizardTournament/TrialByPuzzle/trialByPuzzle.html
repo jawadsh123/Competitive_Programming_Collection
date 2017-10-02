@@ -1,0 +1,65 @@
+<p> </p>
+<p>
+In the same alternate Universe where the Grand Feast is taking place, Cersei has held Jon Snow captive. She has accused Jon of rebelling against the Crown by being Dany's ally. Jon denied saying that he was doing what needed to be done to fight off the White Walkers.</p>
+<p>But Cersei wouldn't have it. Tyrion proposes a Trial by Combat. But as Cersei knows that Jon is a great warrior and has every chance of winning it, she spins up a new form of trial - The Trial by Puzzle. Cersei will propose a puzzle, if Jon fails to solve it, he'll be given the death penalty. If he wins on the other hand, he won't be killed but would still remain a prisoner.</p>
+<p>Jon just needs to buy some time until Dany arrives with her Dragons so he accepts the offer. </p>
+<p>The puzzle is as follows:</p>
+<p>You are given a binary string of some radom length (i.e. the string is made up of only <b>1's</b> and <b>0's</b>). You need to transform this string into a string of only zeroes by performing certain operations.</p>
+<p>In each operation, you can take a certain prefix of the string and flip all it's values. So now all the 1's in that prefix become 0's and vice-versa.</p>
+<pre>A prefix of string <b>S</b> is any string that starts from index <b>0</b> and ends at <b>j</b>, where <b>j</b> < length of <b>S</b></pre>
+<p>The quest is to find the minimum number of such operations that would be required to make all the characters in the string 0's.</p>
+<p>But, as you might have guessed, Jon knows nothing, so he has chosen you as his champion. Help him solve the puzzle or die with him ;(</p>
+<p> </p>
+
+
+<h3>Input</h3>
+<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>
+<p>Each test case has only one line denoting the binary string which Cersei gives to Jon</p>
+<p> </p>
+
+<h3>Output</h3>
+<p>For each test case output an integer representing the minimum number of operations required to transform the string into all 0's</p>
+<p> </p>
+
+<h3>Constraints</h3>
+<ul>
+	<li>1 ≤  <b>T</b> ≤ 10</li>
+	<li>1 ≤ <b>S<sub>length</sub></b> ≤ 10<sup>5</sup></li>
+</ul>
+<p></p>
+<h3><b>Subtasks</b></h3><br>
+<p><b>Subtask #1 </b>(30 points):</p>
+<ul>
+	<li>1 ≤ <b>T</b> ≤ 10 </li>
+	<li>1 ≤ <b>S<sub>length</sub></b> ≤ 10<sup>3</sup></li>
+</ul>
+<p></p>
+<p><b>Subtask #2 </b>(70 points):</p>
+<ul>
+	<li>1 ≤ <b>T</b> ≤ 10</li>
+	<li><b>Original Constraints</b></li>
+</ul>
+
+<p> </p>
+<h3>Example</h3>
+<pre><b>Input:</b>
+1
+010100
+
+<b>Output:</b>
+4
+</pre>
+<p> </p>
+<h3>Explanation</h3>
+<p><b>Example case 1.</b><br>
+<ul>
+<li>Operation 1:
+Flip all the values in the prefix of length 2 and transform it into 100100.</li>
+<li>Operation 2:
+Flip all the values in the prefix of length 4 and transform it into 011000.</li>
+<li>Operation 3:
+Flip all the values in the prefix of length 3 and transform it into 100000.</li>
+<li>Operation 4:
+Flip all the values in the prefix of length 1 and transform it into 000000.</li>
+</ul></p>
+<p>There are many other combination of operations possible, but none of then would take less than 4 operations so the answer is <b>4</b>.</p>

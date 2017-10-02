@@ -1,0 +1,86 @@
+<p> </p>
+<p>
+Professor Dumbledore has just been informed that Lord Voldemort has gathered a huge army of Wizards and Witches and is marching towards Hogwarts to attack from the North.
+To prepare for the attack, Dumbledore ordered all the Wizards and Witches at Hogwarts to spread across the Northern border of the school.
+</p>
+<p>
+The border can be imagined as a straight line of length <b>N</b> units. At each unit a wizard is stationed.
+</p>
+<p>
+Voldemort has a special way of attack. He sends a few people from his army every hour to attack, and the war will last for <b>Q</b> hours.
+On each hour he attacks a part of border between <b>L</b> and <b>R</b> units (both inclusive) with <b>C</b> wizards of class <b>W</b>.
+</p>
+<p>
+Dumbledore knows about this attacking strategy.
+He Knows that in order to protect Hogwarts from getting destroyed he needs to have atleast <b>C</b> wizard of class <b>W</b> stationed in the part of the border that is being attacked. (i.e. between <b>L</b> and <b>R</b>)
+</p>
+<p>
+The border is huge and there is no time to change the positions of wizards. 
+You are the war tactician at Hogwarts and you have been given an Array <b>A</b> with array element <b>A[i]</b> denoting the class of wizard stationed at ith position and you have been asked to find whether the part that is being attacked will stand or not in a '<b>YES</b>' or '<b>NO</b>' format.
+</p>
+<p> </p>
+
+
+
+<h3>Input</h3>
+<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>
+<p>First line of each test case contains two space seperated integers <b>N</b> and <b>Q</b> denoting length of the border, and time period of war (in hours) respectively.</p>
+<p>Next line of each test case contains <b>N</b> space seperated integers that form an array <b>A</b>, where <b>A[i]</b> denotes the class of wizard at ith unit,</p>
+<p>The next <b>Q</b> lines of each test case contains 4 space separated integers <b>L</b>, <b>R</b>, <b>W</b> and <b>C</b> denoting start of range, end of range, class of attacking wizards and count of attacking wizards repectively.</p>
+<p> </p>
+
+<h3>Output</h3>
+<p>For each Query <b>Q</b> output a single line of either '<b>YES</b>' or '<b>NO</b>', without quotes.</p>
+<p>Print 'YES' - if the attacking wizards can be defeated</p>
+<p>Print 'NO' - if the wizards cannot be defeated</p>
+<p> </p>
+
+<h3>Constraints</h3>
+<ul>
+<li><b>1</b> ≤ <b>T</b> ≤ <b>5</b></li>
+<li><b>1</b> ≤ <b>N, Q</b> ≤ <b>10<sup>5</sup></b></li>
+<li><b>1</b> ≤ <b>A[i], X</b> ≤ <b>10<sup>9</sup></b></li>
+<li><b>1</b> ≤ <b>L</b> ≤ <b>R</b> ≤ <b>10<sup>5</sup></b></li>
+<li><b>1</b> ≤ <b>C</b> ≤ <b>R-L+1</b></li>
+</ul>
+<p> </p>
+<h3><b>Subtasks</b></h3><br>
+<p><b>Subtask #1 </b>(30 points):</p>
+<ul>
+	<li>1 ≤ <b>N, Q</b> ≤ 10<sup>3</sup></li>
+	<li>1 ≤ <b>L ≤ R</b> ≤ 10<sup>3</sup></li>
+	<li>1 ≤ <b>C</b> ≤ <b>R-L+1</b></li>	
+</ul>
+<p></p>
+<p><b>Subtask #3 </b>(70 points):</p>
+<ul>
+	<li><b>Original Constraints</b></li>
+</ul>
+
+<p></p>
+
+<h3>Example</h3>
+<pre><b>Input:</b>
+1
+5 3
+1 2 3 2 1
+0 1 1 1
+1 4 2 2
+1 4 2 3
+
+<b>Output:</b>
+YES
+YES
+NO
+
+</pre>
+<p> </p>
+<h3>Explanation</h3>
+<p><b><u>Query 1:</u></b></p>
+<p>For the first query, L=0, R=1, W=1, C=1. Since there is 1 wizard of class "<b>1</b>" present in range (0-1), which is >= C, the answer is "YES"</p>
+
+<p><b><u>Query 2:</u></b></p>
+<p>L=1, R=4, W=2, C=2. Since there are 2 wizards of class "<b>2</b>" present in range (1-4), which is >= C, the answer is "YES"</p>
+
+<p><b><u>Query 3:</u></b></p>
+<p>L=1, R=4, W=2, C=3. Since there are only 2 wizards of class "<b>2</b> present in range (1-4), which is <= C, the answer is "NO"</p>

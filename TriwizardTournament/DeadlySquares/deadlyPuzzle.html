@@ -1,0 +1,97 @@
+<p> </p>
+<p>This year,Hogwarts has been nominated to host the coveted Triwizard Tournament. Harry has
+been selected to represent Hogwarts at the tournament.Being the hosts,the stakes are high &
+Harry doesn't want to disappoint anyone.</p>
+<p>
+Harry in the second task in his quest to win the Triwizard Cup needs to rescue his friends which
+have been captured by the Merpeople.</p>
+<p>
+Viktor Krum rescued Hermione whereas Cedric Diggory rescued Cho Chang.Unfortunately,Fleur
+Delacour was attacked by the grindylows & could not complete the task.Harry now needs to
+rescue both Ron & Gabrielle Delacour from the wrath of the sea.</p>
+<p>
+The Merpeople would only allow Harry to rescue one of them.However,they would allow Harry
+to rescue both of them only if he solves a puzzle.</p>
+<p>The puzzle is as follows:</p>
+<ul>
+	<li>Given a rectangular paper of length <b>L</b> and breadth <b>B</b>, we needs to cut a square piece out of it such 
+that the square has side of maximum possible length. </li>
+	<li>Atleast one side of this square needs to be touching an edge of the initial paper.</li>
+	<li>After cutting, there will be a certain amount of paper left. We needs to carry out the same steps on this piece that remains after cutting.</li>
+	<li>This process needs to be carried on until there is no paper left.</li>
+	<li>At the end, we need to state the unique lengths of all square that were cut, and the number of squares that were cut of that length (frequency).</li>
+	<li>These lengths and the corresponding freauencies needs to be printed in descending order of length.</li>
+</ul>
+<p>
+Time is running low for Ron & Gabrielle, Harry needs to quickly solve the problem but he's not really good with puzzles. 
+So he's asking you to solve the problem for him.</p>
+<p>
+Help Harry solve the puzzle & save both Ron & Gabrielle.
+</p>
+<p> </p>
+
+
+<h3>Input</h3>
+<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. </br>
+The next <b>T</b> lines contains 2 space separated integers <b>L</b> and <b>B</b> denoting the initial length and breadth of the paper.</p>
+
+
+<h3>Output</h3>
+<p>For each test case print <b>k</b> lines with two integers, side-length of square <b>(S<sub>i</sub>)</b> and number of squares with side-length  S<sub>i</sub>, i.e. <b>(C<sub>i</sub>)</b>,  in descending order of their side-lengths, where <b>k</b> is the no of squares with unique side-length</p>
+
+<h3>Constraints</h3>
+<p>Should contain all the constraints on the input data that you may have. Format it like:</p>
+<ul>
+<li><b>1</b> ≤ <b>T</b> ≤ <b>10<sup>4</sup></b></li>
+<li><b>1</b> ≤ <b>L</b> ≤ <b>10<sup>18</sup></b></li>
+<li><b>1</b> ≤ <b>B</b> ≤ <b>10<sup>18</sup></b></li>
+</ul>
+<p> </p>
+<h3>Example</h3>
+<p><b><u>Example 1</u></b></p>
+<pre><b>Input:</b>
+1
+6 5
+
+<b>Output:</b>
+5 1
+1 6
+</pre>
+</br>
+
+<p><b><u>Example 2</u></b></p>
+<pre><b>Input:</b>
+1
+4 2
+
+<b>Output:</b>
+2 2
+</pre>
+<p> </p>
+<h3>Explanation</h3>
+<p><b>Example case 1.</b></p>
+<p>
+<img src="https://image.ibb.co/grJXz5/Whats_App_Image_2017_08_27_at_3_39_26_PM_1.jpg">
+<ul>
+	<li>Initially the paper is of dimension <b>6</b> x <b>5</b></li>
+	<li>The largest square that can be made in this state is of dimension <b>5</b> x <b>5</b></li>
+	<li>After cutting out the <b>5</b> x <b>5</b> square, we're left with paper of dimension <b>5</b> x <b>1</b></li>
+	<li>Now the maximum size square we can make is <b>1</b> x <b>1</b></li>
+	<li>After removing <b>1</b> x <b>1</b> we are left with <b>4</b> x <b>1</b> paper. Again the largest square that can be made is of <b>1</b> x <b>1</b></li>
+	<li>We carry this process until we are left with no paper.</li>
+	<li>So we made <b>1</b> square of length <b>5</b> and <b>6</b> squares of length <b>1</b></li>
+</ul>
+
+
+</p>
+<p><b>Example case 2.</b></p>
+<p>
+<img src="https://image.ibb.co/jhuBsQ/Whats_App_Image_2017_08_27_at_3_43_54_PM.jpg" ></p>
+<ul>
+	<li>Initially the paper is of dimension <b>4</b> x <b>2</b></li>
+	<li>The largest square that can be made is if dimension <b>2</b> x <b>2</b></li>
+	<li>After removing the <b>2</b> x <b>2</b> square we are left with <b>2</b> x <b>2</b> paper</li>
+	<li>Since this is itself a square, it becomes the current largest possible square so we cut it out.</li>
+	<li>After above step we are left with no paper</li>
+	<li>So we made <b>2</b> squares of length <b>2</b></li>
+</ul>

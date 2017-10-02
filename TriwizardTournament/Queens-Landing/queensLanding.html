@@ -1,0 +1,111 @@
+<p> </p>
+<p>The Dragon Queen (Danaerys) is about to land in King's Landing for meeting with the High Lords. Danaerys, flashy as usual, has come riding on a Dragon and she plans to land on the Dragon's Pit.</p>
+<p>The Dragon's Pit is a giant rectangle made out of R*C square cells. (i.e. length=R, breadth=C)</p>
+<p>Queen Cersei, having anticipated this, has filled the pit with Lannister Army. Each cell in the pit has a certain number of army men standing on it. So each cell has a number assigned to it that denotes the number of people standing on it.</p>
+<p>Tyrion has reached by ship, and now witnesses the situation. He knows that only Dragon's pit is big enough to land a Dragon in King's Landing. So now he needs to clear a rectangle in the pit for the Queen to land. Luckily he has got some Wildfire at his disposal. To clear a particular rectangular section (sub-matrix) of the pit, <b>x</b> units of wildfire needs to be used.</p>
+<p>For a particular sub-matrix, <b>x</b> = XOR sum of all the cells present in that region. Tyrion is trying to find a satisfactory sub matrix to clear. You will assist him in this task.</p>
+<p>The problem will go as follows:</p>
+<ul>
+	<li>Tyrion needs to run <b>Q</b> queries</li>
+	<li>Each query will have four inputs - <b>(x1, y1)</b>, <b>(x2, y2)</b>, which are diagonally opposite points of a sub-matrix.</li>
+	<li>Your task is to find the number of units of Wildfire required to clear the sub-matrix formed by above points. (i.e. to find the XOR Sum of all the cells present in that sub-matrix)</li>
+</ul>
+<p></p>
+<p>With your crazy math skills, and Tyrion's intellect, we hope to see the Queen land and make History.</p>
+<p></p>
+
+
+<h3>Input</h3>
+
+<p>The first line gives three space separated integers <b>R</b>, <b>C</b>, <b>Q</b>, giving the number of rows, number of columns and the number of
+Queries</p>
+<p>The next <b>R</b> lines each contain, space separated <b>C</b> integers giving the elements of the rows
+The next <b>Q</b> lines each contain space separated four integers giving the top left and bottom right coordinates of the sub matrices
+(rows are numbered 0 to R­-1 and columns are numbered 0 to C­-1, and the top left corner of the matrix has coordinates 0, 0.</p>
+
+
+<h3>Output</h3>
+<p><b>Q</b> lines each giving XOR sum of all the elements in the corresponding Sub Matrix.</p>
+
+
+<h3>Constraints</h3>
+<ul>
+	<li><b>5</b> ≤ <b>R</b> ≤ 1000</li>
+	<li><b>5</b> ≤ <b>C</b> ≤ 1000</li>
+	<li><b>5</b> ≤ <b>Q</b> ≤ 1000000</li>
+</ul>
+<p>The elements of the matrix are integers in the range 0 to 100</p>
+
+
+<h3>Subtasks</h3>
+<ul>
+	<li><b>Subtask 1</b> (10 points): <b>1</b> ≤ <b>Q</b> ≤ 100</b></li>
+	<li><b>Subtask 2</b> (90 points): Original Contraints</li>
+</ul>
+
+
+<h3>Examples -</h3>
+<p><b><u>Example 1</u></b></p>
+<pre>
+<b>Input:</b>
+10 10 1
+30 77 92 21 16 7 77 3 2 20
+66 77 24 40 21 38 3 50 37 100
+59 60 17 7 37 69 40 18 68 17
+27 45 84 35 81 23 4 6 22 97
+51 2 54 62 94 47 44 42 35 91
+63 59 6 49 80 56 73 30 77 89
+74 12 5 56 2 72 2 38 60 75
+63 55 20 16 33 2 64 95 66 78
+43 70 60 22 52 56 6 93 42 16
+86 7 40 56 32 78 78 12 3 90
+0 0 2 2
+
+<b>Output:</b>
+14
+</pre>
+
+<p></p>
+<p><b>Explanation</b></p>
+<p>
+The first sub matrix is
+<pre>
+30 77 92
+66 77 24
+59 60 17
+</pre></p>
+
+<p>The XOR sum of these elements is 14. (i.e. 30^77^92^66^77^24^59^60^17 = 14)</p>
+
+<p><b><u>Example 2</u></b></p>
+<pre>
+<b>Input:</b>
+10 10 1
+30 77 92 21 16 7 77 3 2 20
+66 77 24 40 21 38 3 50 37 100
+59 60 17 7 37 69 40 18 68 17
+27 45 84 35 81 23 4 6 22 97
+51 2 54 62 94 47 44 42 35 91
+63 59 6 49 80 56 73 30 77 89
+74 12 5 56 2 72 2 38 60 75
+63 55 20 16 33 2 64 95 66 78
+43 70 60 22 52 56 6 93 42 16
+86 7 40 56 32 78 78 12 3 90
+0 0 3 3
+
+<b>Output:</b>
+117
+</pre>
+
+<p></p>
+<p><b>Explanation</b></p>
+<p>
+The sub matrix is
+<pre>
+30 77 92 21
+66 77 24 40
+59 60 17 7
+27 45 84 35
+</pre></p>
+
+<p>The XOR sum of these elements is 117</p>

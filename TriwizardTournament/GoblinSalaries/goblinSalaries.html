@@ -1,0 +1,71 @@
+<p> </p>
+<p>Whoa! There seems to be a conundrum at the Gringotts Wizarding Bank. The Goblins have gone on a riot and the entire system is in mayhem.</p>
+<p>Reports suggest that the Goblins have not been getting proper salaries lately. The Enchanted Calculator seems to be broken. Since the calculation of Goblin salary is 
+a really tough task, no mortal has taken up the responsibility.</p>
+<p>Septina Vector, the famous Arithmancer has been called in for help. You are interning under her and will assist her in this task.</p>
+<p>You have the following info:</p>
+<ul>
+	<li>Each Goblin is assigned a unique positive integer</li>
+	<li>A Goblin's salary = a function <b>f(x)</b>, where <b>x</b> = number assigned to that goblin.</li>
+	<li>f(x) = Sum of all the prime factors of <b>x</b></li>
+	<li>Only those Goblins with numbers in range of <b>L</b> to <b>R</b> (both inclusive) are participating in the riot. And all of the Goblins in that range is present.</li>
+</ul>
+<p></p>
+<p>The Ministry of Magic wants to stop the riot and bring everything back to normal (as normal as it can get)</p>
+<p>Your goal is to find the sum of the salaries of all the Goblins present in the riot so that proper amount can be withdrawn from the bank for distribution.</p>
+<p> </p>
+
+
+<h3>Input</h3>
+<p>The first line of the input contains an integer <b>T</b> denoting the number of test cases. The description of <b>T</b> test cases follows.</p>
+<p>Each test case contains two space seperated integers <b>L</b> and <b>R</b> denoting the range of numbers assigned to the Goblins present in the riot.</p>
+<p> </p>
+
+
+<h3>Output</h3>
+<p>For each test case, output a single line containing the total amount that needs to be withdrawn from the bank in order to pay all the Goblins present in the riot.</p>
+<p> </p>
+
+
+<h3>Constraints</h3>
+<ul>
+    <li><b>1</b> ≤ <b>L</b> ≤ <b>R</b> ≤ <b>10<sup>12</sup></b></li>
+    <li><b>R - L</b> ≤ <b>10<sup>6</sup></b></li>
+    <li><b>1</b> ≤ <b>T</b> ≤ <b>5</b></li>
+</ul>
+<p> </p>
+
+
+<h3>Subtasks</h3>
+<ul>
+	<li><b>Subtask 1</b> (20 points): <b>1</b> ≤ <b>L</b> ≤ <b>R</b> ≤ <b>10<sup>3</sup></b></li>
+	<li><b>Subtask 2</b> (30 points): <b>1</b> ≤ <b>L</b> ≤ <b>R</b> ≤ <b>10<sup>6</sup></b></li>
+	<li><b>Subtask 3</b> (50 points): Original Contraints</li>
+</ul>
+
+<h3>Example</h3>
+<pre><b>Input:</b>
+2
+1 10
+2 13
+
+<b>Output:</b>
+45
+76
+</pre>
+<p> </p>
+
+
+<h3>Explanation</h3>
+<p><b>Example case 1.</b> <br>For L=1 and R=10 we have</br>
+f(1)=0 (as 1 is not a prime)</br>
+f(2)=2 (as 2=2*1 and 2 is prime)</br>
+f(3)=3 (as 3=3*1 and 3 is prime)</br>
+f(4)=2+2=4 (as 4=2*2 and 2 is prime)</br>
+f(5)=5 (as 5=5*1 and 5 is prime)</br>
+f(6)=2+3=5 (as 6=3*2 and 2 and 3 are prime)</br>
+f(7)=7 (as 7=7*1 and 7 is prime)</br>
+f(8)=2+2+2=6 (as 8=2*2*2 and 2 is prime)</br>
+f(9)=3+3=6 (as 9=3*3 and 3 is prime)</br>
+f(10)=2+5=7 (as 10=5*2 and 5 and 2 are prime)</br>
+sum of range from f(1) + f(2) + f(3).....+ f(10)= 45</p>

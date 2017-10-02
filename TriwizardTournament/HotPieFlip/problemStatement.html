@@ -1,0 +1,65 @@
+<p> </p>
+<p>In an alternate Universe, Queen Cersei has won the battle for Westeros. Even the white walkers have bent their Skeletal knee.</p>
+<p>To celebrate such an amazing victory, a Grand Feast has been planned at King's Landing. The Queen has ordered the "Inn at the Crossroads" to make N number of pies for the occasion. "Hot-Pie", the famous bread maker, now oversees the functioning of "Inn at the Crossroads" and so the responsibility falls onto him.</p>
+<p>Each Pie has two sides, the <b>top</b> side (with all the toppings) and the
+    <b>base</b>. The pies are cooked in a single row over a hot surface. In haste, Hot-Pie has placed the pies randomly (i.e. Somewhere the Top is facing up, somewhere the Base is facing up)</p>
+<p>In order to be properly cooked, all the pies need to be with Top side facing up. Unfortunately, Hot-Pie does not have a regular Pie flipper at disposal. All the utensils are in use by other Chefs, except for an oversized Pie Flipper that flips exactly <b>K</b> consecutive pies. That is, in that range of <b>K</b> pies, it changes every Top-side pie to a Back-side pie, and vice versa; it does not change the left-to-right order of those pies.</p>
+<p>You cannot flip fewer than <b>K</b> pies at a time with the flipper, even at the ends of the row (since there are raised borders on both sides of the cooking surface). For example, you can flip the first <b>K</b> pies, but not the first <b>K - 1</b> pies.</p>
+<p>Since there is very little time left for the feast, all the pies need to be brought into Top-side up position as soon as possible. Hot-Pie, as you may know, is not really good with problem solving and hence has asked you for help.</p>
+<p>Given the current state of the pies, calculate the minimum number of uses of the oversized pie flipper needed to leave all pies Top-side up, or state that there is no way to do it.</p>
+<p></p>
+<p> </p>
+
+
+<h3>Input</h3>
+<p>The first line of the input gives the number of test cases, <b>T</b>. <b>T</b> test cases follow. Each consists of one line with a string <b>S</b> and an integer <b>K</b>. <b>S</b> represents the row of pies: each of its characters is either <b>+</b> (which represents a pie that is initially Top-side up) or <b>-</b> (which represents a pie that is initially Back-side up).</p>
+<p> </p>
+
+
+<h3>Output</h3>
+<p>For each test case output an integer representing the minimum number of times you will need to use the oversized pancake flipper to get all the pies Top-side up or print <b>"IMPOSSIBLE"</b> (without quotes) if there is no way to do it.</p>
+<p> </p>
+
+
+<h3>Constraints</h3>
+<ul>
+    <li><b>1</b> ≤ <b>T</b> ≤ <b>100</b></li>
+    <li>Every character in S is either + or -</li>
+    <li><b>2</b> ≤ <b>K</b> ≤ <b>length of S</b></li>
+</ul>
+<p> </p>
+
+
+<h3>Subtasks</h3>
+<ul>
+	<li><b>Subtask 1</b> (30 points) : <b>2</b> ≤ length of <b>S</b> ≤ <b>10</b></li>
+	<li><b>Subtask 2</b> (70 points) : <b>2</b> ≤ length of <b>S</b> ≤ <b>1000</b></li>
+</ul>
+
+
+<h3>Example</h3>
+<pre><b>Input:</b>
+3
+---+-++- 3
++++++ 4
+-+-+- 4
+
+<b>Output:</b>
+3
+0
+IMPOSSIBLE
+</pre>
+<p> </p>
+
+
+<h3>Explanation</h3>
+
+<p><b>Test Case 1 :</b></p>
+<p>We can get all the pies Top-side up by first flipping the leftmost 3 pies, getting to ++++-++-, then the rightmost 3, getting to ++++---+, and finally the 3 pies that remain Back-side up. There are other ways to do it with 3 flips or more, but none with fewer than 3 flips.</p>
+
+<p><b>Test Case 2 :</b></p>
+<p>All of the pies are already Top-side up, so there is no need to flip any of them.</p>
+
+<p><b>Test Case 3 :</b></p>
+<p>There is no way to make the second and third pies from the left have the same side up, because any flip flips them both. Therefore, there is no way to make all of the pies Top-side up.</p>
+
